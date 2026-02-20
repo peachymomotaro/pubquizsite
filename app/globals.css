@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 37% 96%;
+  --foreground: 25 31% 11%;
+  --muted: 40 30% 89%;
+  --muted-foreground: 24 17% 35%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 25 31% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 25 31% 11%;
+  --border: 30 20% 78%;
+  --input: 30 20% 78%;
+  --primary: 13 86% 43%;
+  --primary-foreground: 35 100% 98%;
+  --secondary: 45 67% 90%;
+  --secondary-foreground: 24 37% 17%;
+  --accent: 165 52% 92%;
+  --accent-foreground: 160 68% 20%;
+  --ring: 13 86% 43%;
+  --radius: 0.625rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family:
+    "Trebuchet MS",
+    "Gill Sans",
+    "Segoe UI",
+    sans-serif;
+  background-image:
+    radial-gradient(
+      circle at 20% -10%,
+      hsl(var(--secondary) / 0.75),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      hsl(var(--accent) / 0.7),
+      transparent 35%
+    );
+}
+
+a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
